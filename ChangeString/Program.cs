@@ -4,9 +4,15 @@ namespace ChangeString
 {
     class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string s;
+            char c; 
+           
         }
     }
 }
