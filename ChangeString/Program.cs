@@ -10,7 +10,7 @@ namespace ChangeString
         /// <param name="args"></param>
         private static void Main(string[] args)
         {
-            string s;
+            string s, result ="";
             char c; 
 
 
@@ -26,16 +26,25 @@ namespace ChangeString
 
             //
 
-            string x = "X";
+          
 
             foreach(char character in s)
             {
                 if(character == c)
                 {
 
+                    result += "X"; 
+
+                }
+
+                else
+                {
+                    result += character; 
 
                 }
             }
+
+            Console.WriteLine(result); 
            
         }
     }
