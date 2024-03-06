@@ -12,6 +12,16 @@ namespace ChangeString
         {
             string s;
             char c; 
+
+
+
+            Console.Write("Insert a string: ");
+
+            s = Console.ReadLine(); 
+
+            Console.Write("Insert a character: ");
+
+            c = char.Parse(Console.ReadLine()); 
            
         }
     }
