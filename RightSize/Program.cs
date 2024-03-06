@@ -12,22 +12,30 @@ namespace RightSize
         private static void Main(string[] args)
         {
 
-            // print args with lenght > 3
-            if(args.Length > 3)
+            int i = 0;
+
+            
+            foreach(string s in args)
             {
 
-                foreach(string s in args)
+               
+                // print args with lenght > 3
+                if (s.Length > 3)
                 {
-                    int i = 0;  
 
-                    Console.WriteLine(); 
+                    if(s.Length > 6)
+                    {
+                        return; 
+                    }
 
-                    i++; 
+                    Console.WriteLine(args[i]);
+                } 
 
-                }
+                
+                i++;
                 
             }
-
+                
 
         }
     }
