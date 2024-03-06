@@ -4,9 +4,15 @@ namespace RightSize
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // iterate each position in the string args
+            foreach(char c in args)
+            {
+                
+
+
+            }
         }
     }
 }
