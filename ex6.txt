@@ -1,0 +1,6 @@
+1) Encrypt
+2) string
+3) string e int
+4) Encrypt(string int)
+5) public virtual
+6) s = Encrypt("SenhaABC", 32)
