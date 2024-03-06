@@ -21,7 +21,21 @@ namespace ChangeString
 
             Console.Write("Insert a character: ");
 
-            c = char.Parse(Console.ReadLine()); 
+            c = char.Parse(Console.ReadLine());
+
+
+            //
+
+            string x = "X";
+
+            foreach(char character in s)
+            {
+                if(character == c)
+                {
+
+
+                }
+            }
            
         }
     }
