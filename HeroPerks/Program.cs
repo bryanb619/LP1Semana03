@@ -2,67 +2,33 @@
 
 namespace HeroPerks
 {
+
     class Program
     {
         private static void Main(string[] args)
         {
-            //Perks perks;
 
-            //Perks perk;
+            Perks perks; 
 
-            int i = 0; 
+            int i = 0, j = 0;
 
-            string[] perksArray = new string[Enum.GetNames(typeof(Perks)).Length]; 
+
+            string[] perksArray = new string
+            [Enum.GetNames(typeof(Perks)).Length]; 
+
+            string[] argumentStrings = new string
+            [args.Length];
                   
-            // 
-           //perks = Perks.WaterBreathing;
-
+        
             foreach(string perkName in Enum.GetNames(typeof(Perks)))
             {
 
                 perksArray[i] = perkName;
-                Console.WriteLine(perksArray[i]); 
+                //Console.WriteLine(perksArray[i]); 
 
                 i++; 
-
-                
-                
             }
-
-             
-
-        /*
-
-            foreach(string s in args)
-            {
-            /*
-                switch(perks)
-                {
-                    case Perks.WaterBreathing:
-                    {
-
-                        break; 
-                    }
-
-                    case Perks.Stealth:
-                    {
-                        break; 
-                    }
-
-                    case Perks.AutoHeal:
-                    {
-                        break; 
-                    }
-
-                    case Perks.DoubleJump:
-                    {
-                        break; 
-                    }
-                } */
         }
 
-            //perk = (Perks)Enum.Parse(typeof(Perks), s); 
-
-        
     }
 }
