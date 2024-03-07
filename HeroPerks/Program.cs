@@ -6,7 +6,12 @@ namespace HeroPerks
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Perks perks; 
+
+           foreach(string s in args)
+           {
+
+           }
         }
     }
 }
