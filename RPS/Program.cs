@@ -2,17 +2,13 @@
 
 namespace RPS
 {
-
-  
     class Program
     {
 
-         
-
+        
         private static void Main(string[] args)
         {
             int result = RockPaperScissors(args[0], args[1]);
-            
             
             switch (result)
             {
@@ -31,27 +27,33 @@ namespace RPS
         /// <summary>
         ///  Backup variable
         ///  -> gameState "guarantees" no lost return in code
-        /// 
+        ///  
         /// </summary>
         /// <param name="player1">first string</param>
         /// <param name="player2">second string</param>
         /// <returns>The game state</returns>
         private static int RockPaperScissors(string player1, string player2)
         {
+
+            // enums for game status & items
             GameStatus status; 
             
             GameItem play1Item; 
             GameItem play2Item; 
 
+            // convert to enums the args
             play1Item = (GameItem)Enum.Parse(typeof(GameItem), player1); 
             play2Item = (GameItem)Enum.Parse(typeof(GameItem), player2);
 
 
+            // check if both actions are equal
             if (play1Item == play2Item)
             {
-                //gameState = 0; // Draw
+                // 
                 status = GameStatus.Draw; 
             }
+
+            // check game conditions
             else if (((play1Item == GameItem.Rock ) && (play2Item == GameItem.Scissors)) ||
                 ((play1Item == GameItem.Scissors) && (play2Item == GameItem.Paper)) ||
                 ((play1Item == GameItem.Paper) && (play2Item == GameItem.Rock)))
@@ -65,6 +67,8 @@ namespace RPS
                 status = GameStatus.player2Wins; 
             }
 
+
+            // return and convert as integer
             return (int)status;
         }
     }
