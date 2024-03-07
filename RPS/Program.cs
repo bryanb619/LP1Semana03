@@ -40,19 +40,11 @@ namespace RPS
         {
             GameStatus status; 
             
-            int gameState = 0;
-
-            
-
-
-
             GameItem play1Item; 
             GameItem play2Item; 
 
             play1Item = (GameItem)Enum.Parse(typeof(GameItem), player1); 
             play2Item = (GameItem)Enum.Parse(typeof(GameItem), player2);
-
-            
 
 
             if (play1Item == play2Item)
@@ -60,14 +52,14 @@ namespace RPS
                 //gameState = 0; // Draw
                 status = GameStatus.Draw; 
             }
-            if (((play1Item == GameItem.Rock ) && (play2Item == GameItem.Scissors)) ||
-                ((play1Item == "Scissors") && (play2Item == "Paper")) ||
-                ((play1Item == "Paper") && (play2Item == "Rock")))
+            else if (((play1Item == GameItem.Rock ) && (play2Item == GameItem.Scissors)) ||
+                ((play1Item == GameItem.Scissors) && (play2Item == GameItem.Paper)) ||
+                ((play1Item == GameItem.Paper) && (play2Item == GameItem.Rock)))
             {
                 //gameState = 1; // Player 1 wins
                 status = GameStatus.player1Wins;
             }
-            else
+            else 
             {
                 //gameState = 2; // Player 2 wins
                 status = GameStatus.player2Wins; 
