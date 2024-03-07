@@ -12,6 +12,8 @@ namespace RPS
         private static void Main(string[] args)
         {
             int result = RockPaperScissors(args[0], args[1]);
+            
+            
             switch (result)
             {
                 case 0:
@@ -38,28 +40,37 @@ namespace RPS
         {
             GameStatus status; 
             
-            int gameState = 0; 
+            int gameState = 0;
 
-            status = (GameStatus)Enum.Parse(typeof(GameStatus),""); 
+            
+
+            GameItem player1Item; 
+            GameItem player2Item; 
+
+            player1Item = (GameItem)Enum.Parse(typeof(GameItem), player1); 
+            player2Item = (GameItem)Enum.Parse(typeof(GameItem), player2);
 
 
-            if (player1 == player2)
+
+            if (player1Item == player2Item)
             {
                 //gameState = 0; // Draw
                 status = GameStatus.Draw; 
             }
-            if (((player1 == "Rock") && (player2 == "Scissors")) ||
+            if (((player1Item == GameItem.Rock ) && (player2 == "Scissors")) ||
                 ((player1 == "Scissors") && (player2 == "Paper")) ||
                 ((player1 == "Paper") && (player2 == "Rock")))
             {
                 //gameState = 1; // Player 1 wins
+                status = GameStatus.player1Wins;
             }
             else
             {
                 //gameState = 2; // Player 2 wins
+                status = GameStatus.player2Wins; 
             }
 
-            return gameState; 
+            return (int)status;
         }
     }
 }
