@@ -4,7 +4,7 @@ namespace PlayerPowers
 {
 
     [Flags]
-    public enum Powers
+    public enum PowersEnum
     {
         Fly = 1 << 0, 
         XRayVision = 1 << 1,

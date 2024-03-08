@@ -14,11 +14,10 @@ namespace PlayerPowers
             // convert to int
             int n = int.Parse(Console.ReadLine()); 
 
-            // array of players
-            string[][] players = new string[n][3];
 
+            PowersEnum[][] players = new PowersEnum[n][3];
 
-            Powers power; 
+           // Powers power; 
 
 
             for(int i = 0; i < players.Length; i++)
@@ -27,28 +26,28 @@ namespace PlayerPowers
                 for(int j= 0; j < 3; j++)
                 {
 
-                    Console.WriteLine($"Player {i} enter a power: ");
+                    Console.WriteLine($"Player {i+1} enter a power: ");
 
                     string pow = Console.ReadLine();
                     
-                    p_power = (Powers)Enum.Parse(typeof(Powers), pow);
+                    //p_power = (Powers)Enum.Parse(typeof(Powers), pow);
 
                     switch(p_power)
                     {
 
                         case Powers.Fly:
 
-                            players[i][j] ^= powers.Fly;
+                            players[i][j] ^= Powers.Fly:;
                             break;
 
                         case Powers.XRayVision:
                
-                            players[i][j] ^= "XRayVision";
+                            players[i][j] ^= Powers.XRayVision;
                             break;
 
                         case Power.SuperStrength:
                 
-                            players[i][j] ^= "SuperStrength";
+                            players[i][j] ^= Power.SuperStrength;
                             break;
 
 
