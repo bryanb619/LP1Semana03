@@ -54,7 +54,7 @@ namespace RPS
             }
 
             // check game conditions
-            else if (((play1Item == GameItem.Rock ) && (play2Item == GameItem.Scissors)) ||
+            else if (((play1Item == GameItem.Rock) && (play2Item == GameItem.Scissors)) ||
                 ((play1Item == GameItem.Scissors) && (play2Item == GameItem.Paper)) ||
                 ((play1Item == GameItem.Paper) && (play2Item == GameItem.Rock)))
             {

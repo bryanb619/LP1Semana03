@@ -8,13 +8,13 @@ namespace HeroPerks
         private static void Main(string[] args)
         {
 
-            Perks perks; 
+
 
             int i = 0, j = 0;
 
 
-            string[] perksArray = new string
-            [Enum.GetNames(typeof(Perks)).Length]; 
+
+            string[] perksArray = new string[Enum.GetNames(typeof(Perks)).Length]; 
 
             string[] argumentStrings = new string
             [args.Length];
