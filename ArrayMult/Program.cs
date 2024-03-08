@@ -13,8 +13,6 @@ namespace ArrayMult
             float[,] b = new float[2, 1];
 
            
-
-
             // A array values
             a[0,0] = float.Parse(args[0]);
             a[0,1] = float.Parse(args[1]);
