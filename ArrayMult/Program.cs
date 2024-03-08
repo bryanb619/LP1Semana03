@@ -14,10 +14,22 @@ namespace ArrayMult
 
             float CalcResult = 0F; 
 
-            foreach (string arg in args)
+
+            
+            a[0,0] = float.Parse(args[0]);
+            a[0,1] = float.Parse(args[1]);
+
+;           a[1,0] = float.Parse(args[2]);
+            a[1,1] = float.Parse(args[3]);
+
+
+
+            for (int x = 4; x < args.Length; x++)
             {
-                Console.WriteLine(arg);
+                b[x,0] = float.Parse(args[x]);
             }
+   
+           
     
         
             for(int i = 0; i < 2; i++)
@@ -29,8 +41,6 @@ namespace ArrayMult
                     
                 }
             }
-
-
 
             Console.WriteLine(CalcResult);
         }
