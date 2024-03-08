@@ -15,63 +15,51 @@ namespace PlayerPowers
             int n = int.Parse(Console.ReadLine()); 
 
 
-            PowersEnum[][] players = new PowersEnum[n][3];
+            PowersEnum[][] players = new PowersEnum[n][];
 
-           // Powers power; 
 
 
             for(int i = 0; i < players.Length; i++)
             {
+
+                players[i] = new PowersEnum[3];
+
+            
+
                 // Request input from user (string)
                 for(int j= 0; j < 3; j++)
                 {
 
-                    Console.WriteLine($"Player {i+1} enter a power: ");
+                    Console.Write($"Player {i+1} enter a power: ");
 
                     string pow = Console.ReadLine();
+
+              
                     
                     //p_power = (Powers)Enum.Parse(typeof(Powers), pow);
 
-                    switch(p_power)
+                    if(pow == "Fly")
                     {
-
-                        case Powers.Fly:
-
-                            players[i][j] ^= Powers.Fly:;
-                            break;
-
-                        case Powers.XRayVision:
-               
-                            players[i][j] ^= Powers.XRayVision;
-                            break;
-
-                        case Power.SuperStrength:
-                
-                            players[i][j] ^= Power.SuperStrength;
-                            break;
-
-
-                        default:
-                            Console.WriteLine("Invalid Power");
-                            break;
+                        players[i][j] = PowersEnum.Fly;
                     }
-                 
-                }
-                Console.WriteLine(players[i][j]);
-            }
-/*
+                    else if(pow == "XRayVision")
+                    {
+                        players[i][j] = PowersEnum.XRayVision;
+                    }
+                    else if(pow == "SuperStrength")
+                    {
+                        players[i][j] = PowersEnum.SuperStrength;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Power");
+                    }
 
-            for(int i = 0; i < players.Length; i++)
-            {
-                for(int j = 0; j < 3; j++)
-                {
-                    if(players[i] 
-                    )
-                    Console.WriteLine(players[i][j]);
                 }
+                
             }
 
-        }~
-        */
+        }
+        
     }
 }

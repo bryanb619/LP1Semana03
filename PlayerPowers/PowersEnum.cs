@@ -2,7 +2,6 @@ using System;
 
 namespace PlayerPowers
 {
-
     [Flags]
     public enum PowersEnum
     {
